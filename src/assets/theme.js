@@ -3,9 +3,11 @@ import styled from "styled-components";
 const theme = {
     muli: "Muli",
     blueColor: "#0C3580",
+    blueColorBG: "linear-gradient(#0C3580E0, #0C3580E0)",
     aquaBlueColor: "#0A71CA",
+    aquaBlueColorBG: "linear-gradient(#0A71CAE0, #0A71CAE0)",
     skyBlueColor: "#CEE6F5",
-    violetColor: "#464866",
+    violetColor: "#351F53",
     yellowColor: "#FFD500",
     blackColor: "#000000",
     grayColor: "#565656",

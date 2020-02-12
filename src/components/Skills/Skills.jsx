@@ -5,7 +5,9 @@ import { card } from "../../assets/theme";
 
 const SkillsStyle = styled(card)`
     width: 40%;
-    background: ${props => props.theme.aquaBlueColor};
+    background: ${props => props.theme.aquaBlueColorBG}, url("/bg/skills.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &:hover:before {
         -webkit-transform: scaleY(1);

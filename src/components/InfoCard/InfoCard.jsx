@@ -9,8 +9,8 @@ import flag from "../../assets/icons/flag.svg";
 
 const InfoCardStyle = styled.div`
     height: 45vh;
-    width: 60%;
-    color: ${props => props.theme.violetColor};
+    width: 55%;
+    color: ${props => props.theme.blackColor};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ const NameH1 = styled.h1`
 `;
 
 const PositionH2 = styled.h2`
-    font-size: 18px;
+    font-size: 16px;
 `;
 
 const InfoList = styled.ul`

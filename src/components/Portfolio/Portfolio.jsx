@@ -5,7 +5,9 @@ import { card } from "../../assets/theme";
 
 const PortfolioStyle = styled(card)`
     width: 40%;
-    background: ${props => props.theme.blueColor};
+    background: ${props => props.theme.blueColorBG}, url("/bg/portfolio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &:hover:before {
         -webkit-transform: scaleX(1);

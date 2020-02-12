@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Row } from "react-bootstrap";
 import GlobalFonts from "../../fonts/fonts";
@@ -9,31 +9,32 @@ import Portfolio from "../../components/Portfolio";
 import Skills from "../../components/Skills";
 import Resume from "../../components/Resume";
 import { theme } from "../../assets/theme";
+import WorkContent from "../../components/WorkContent";
 
 const GlobalStyle = createGlobalStyle`
   @import '~bootstrap/scss/bootstrap.scss';
 
-  * {
-    box-sizing : border-box;
-  }
-
   html, body {
     margin: 0;
     padding: 0;
-    background-color: #F9F9F9;
+    background-color: #F7F7F7;
   }
 `;
 
 function App() {
+    const [workContent, showWorkContent] = useState(false);
+
     return (
         <ThemeProvider theme={theme}>
             <GlobalFonts />
             <GlobalStyle />
             <Layout>
+                <WorkContent animate={workContent} />
+
                 <div className="App">
                     <Row>
                         <InfoCard />
-                        <Work />
+                        <Work onClick={() => showWorkContent(true)} />
                     </Row>
                     <Row>
                         <Portfolio />
