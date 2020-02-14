@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     return (
         <Background>
             <Container fluid>
-                <CustomAnimateOnChange animation="bounce" durationOut={1000}>
+                <CustomAnimateOnChange animation="pop">
                     {children}
                 </CustomAnimateOnChange>
             </Container>

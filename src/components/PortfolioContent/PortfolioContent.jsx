@@ -4,7 +4,7 @@ import { overlay } from "../../assets/theme";
 import CloseButton from "../CloseButton";
 import { Row } from "react-bootstrap";
 
-const PortfolioContent = ({ onClose }) => {
+const PortfolioContent = ({ onClose, style }) => {
     const PortfolioOverlay = styled(overlay)`
         background: ${props => props.theme.blueColor};
     `;
@@ -19,7 +19,7 @@ const PortfolioContent = ({ onClose }) => {
     `;
 
     return (
-        <Row>
+        <Row style={style}>
             <PortfolioOverlay>
                 <CloseButton onClick={onClose} />
                 <h2>Portfolio</h2>

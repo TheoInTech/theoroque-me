@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { overlay, overlayTransition } from "../../assets/theme";
+import { overlay } from "../../assets/theme";
 import works from "../../assets/data/works";
 import CloseButton from "../CloseButton";
 import WorkBlock from "../WorkBlock";
 import { Row } from "react-bootstrap";
 
-const WorkContent = ({ onClose }) => {
+const WorkContent = ({ onClose, style }) => {
     const WorkOverlay = styled(overlay)`
         background: ${props => props.theme.blueColor};
     `;
@@ -19,7 +19,7 @@ const WorkContent = ({ onClose }) => {
     `;
 
     return (
-        <Row>
+        <Row style={style}>
             <WorkOverlay>
                 <CloseButton onClick={onClose} />
                 <h2>Work</h2>

@@ -4,7 +4,7 @@ import { overlay } from "../../assets/theme";
 import CloseButton from "../CloseButton";
 import { Row } from "react-bootstrap";
 
-const SkillsContent = ({ onClose }) => {
+const SkillsContent = ({ onClose, style }) => {
     const SkillsOverlay = styled(overlay)`
         background: ${props => props.theme.aquaBlueColor};
     `;
@@ -19,7 +19,7 @@ const SkillsContent = ({ onClose }) => {
     `;
 
     return (
-        <Row>
+        <Row style={style}>
             <SkillsOverlay>
                 <CloseButton onClick={onClose} />
                 <h2>Skills</h2>

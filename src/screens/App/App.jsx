@@ -1,6 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Row } from "react-bootstrap";
+import styled from "styled-components";
 import GlobalFonts from "../../fonts/fonts";
 import Layout from "../../components/Layout";
 import InfoCard from "../../components/InfoCard";
@@ -20,21 +21,25 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: #F7F7F7;
+    overflow: hidden;
   }
 `;
 
 function App() {
-    const [inSplash, showSplash] = useState(true);
     const [content, showContent] = useState("");
 
-    useEffect(() => {
-        showSplash(content === "" && true);
-    }, [content]);
+    const InfoCardContent = styled.div`
+        visibility: ${content === "" ? "visible" : "hidden"};
+        position: ${content === "" ? "relative" : "absolute"};
+        top: 0;
+    `;
 
-    const buildApp = () => {
-        if (inSplash === true) {
-            return (
-                <Fragment>
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalFonts />
+            <GlobalStyle />
+            <Layout>
+                <InfoCardContent>
                     <Row>
                         <InfoCard />
                         <Work onClick={() => showContent("work")} />
@@ -44,24 +49,44 @@ function App() {
                         <Skills onClick={() => showContent("skills")} />
                         <Resume />
                     </Row>
-                </Fragment>
-            );
-        }
-
-        if (content === "work") {
-            return <WorkContent onClose={() => showContent("")} />;
-        } else if (content === "portfolio") {
-            return <PortfolioContent onClose={() => showContent("")} />;
-        } else if (content === "skills") {
-            return <SkillsContent onClose={() => showContent("")} />;
-        }
-    };
-
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalFonts />
-            <GlobalStyle />
-            <Layout>{buildApp}</Layout>
+                </InfoCardContent>
+                <WorkContent
+                    onClose={() => showContent("")}
+                    style={
+                        content === "work"
+                            ? { visibility: "visible", position: "relative" }
+                            : {
+                                  visibility: "hidden",
+                                  position: "absolute",
+                                  top: "0"
+                              }
+                    }
+                />
+                <PortfolioContent
+                    onClose={() => showContent("")}
+                    style={
+                        content === "portfolio"
+                            ? { visibility: "visible", position: "relative" }
+                            : {
+                                  visibility: "hidden",
+                                  position: "absolute",
+                                  top: "0"
+                              }
+                    }
+                />
+                <SkillsContent
+                    onClose={() => showContent("")}
+                    style={
+                        content === "skills"
+                            ? { visibility: "visible", position: "relative" }
+                            : {
+                                  visibility: "hidden",
+                                  position: "absolute",
+                                  top: "0"
+                              }
+                    }
+                />
+            </Layout>
         </ThemeProvider>
     );
 }
