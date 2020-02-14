@@ -11,10 +11,12 @@ const theme = {
     yellowColor: "#FFD500",
     blackColor: "#000000",
     grayColor: "#565656",
+    lightGrayColor: "#DCD8D8",
     whiteColor: "#FFFFFF",
     hoverColor: "#0FA1DE",
     boxShadow: "0px 5px 5px #00000040",
     textShadow: "0px 4px 5px #00000029",
+    closeShadow: "0px 10px 10px #00000029",
     transitionDuration: "0.3s"
 };
 
@@ -28,6 +30,18 @@ const card = styled.div`
     cursor: pointer;
     transition-duration: ${props => props.theme.transitionDuration};
     padding: 36px;
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.004), 0 50px 80px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.004), 0 50px 80px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.004), 0 50px 80px rgba(0, 0, 0, 0.05);
 
     &:hover {
         filter: brightness(1.25);
@@ -45,4 +59,27 @@ const card = styled.div`
     }
 `;
 
-export { theme, card };
+const overlay = styled.div`
+    height: 90vh;
+    padding: 16px;
+    flex: 1 1 auto;
+    overflow: auto;
+
+    ::-webkit-scrollbar {
+        width: 25px;
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${props => props.theme.aquaBlueColorBG};
+    }
+
+    > h2 {
+        color: ${props => props.theme.whiteColor};
+        font-size: 72px;
+        font-weight: 700;
+        text-shadow: ${props => props.theme.textShadow};
+    }
+`;
+
+export { theme, card, overlay };

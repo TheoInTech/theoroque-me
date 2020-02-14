@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import { card } from "../../assets/theme";
-// import { Row, Col } from "react-bootstrap";
 
 const Work = ({ onClick }) => {
     const WorkStyle = styled(card)`
@@ -44,11 +43,9 @@ const Work = ({ onClick }) => {
     `;
 
     return (
-        <Fragment>
-            <WorkStyle onClick={onClick}>
-                <h2>Work</h2>
-            </WorkStyle>
-        </Fragment>
+        <WorkStyle onClick={onClick}>
+            <h2>Work</h2>
+        </WorkStyle>
     );
 };
 

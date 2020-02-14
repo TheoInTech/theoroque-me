@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { card } from "../../assets/theme";
-// import { Row, Col } from "react-bootstrap";
 
 const SkillsStyle = styled(card)`
     width: 40%;
@@ -40,9 +39,9 @@ const SkillsStyle = styled(card)`
     }
 `;
 
-const Skills = () => {
+const Skills = ({ onClick }) => {
     return (
-        <SkillsStyle>
+        <SkillsStyle onClick={onClick}>
             <h2>Skills</h2>
         </SkillsStyle>
     );

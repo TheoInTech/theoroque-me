@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Row } from "react-bootstrap";
 import GlobalFonts from "../../fonts/fonts";
@@ -10,6 +10,8 @@ import Skills from "../../components/Skills";
 import Resume from "../../components/Resume";
 import { theme } from "../../assets/theme";
 import WorkContent from "../../components/WorkContent";
+import PortfolioContent from "../../components/PortfolioContent";
+import SkillsContent from "../../components/SkillsContent";
 
 const GlobalStyle = createGlobalStyle`
   @import '~bootstrap/scss/bootstrap.scss';
@@ -22,29 +24,46 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-    const [workContent, showWorkContent] = useState(false);
+    const [inSplash, showSplash] = useState(true);
+    const [content, showContent] = useState("");
+
+    useEffect(() => {
+        showSplash(content === "" && true);
+    }, [content]);
+
+    const buildApp = () => {
+        if (inSplash === true) {
+            return (
+                <Fragment>
+                    <Row>
+                        <InfoCard />
+                        <Work onClick={() => showContent("work")} />
+                    </Row>
+                    <Row>
+                        <Portfolio onClick={() => showContent("portfolio")} />
+                        <Skills onClick={() => showContent("skills")} />
+                        <Resume />
+                    </Row>
+                </Fragment>
+            );
+        }
+
+        if (content === "work") {
+            return <WorkContent onClose={() => showContent("")} />;
+        } else if (content === "portfolio") {
+            return <PortfolioContent onClose={() => showContent("")} />;
+        } else if (content === "skills") {
+            return <SkillsContent onClose={() => showContent("")} />;
+        }
+    };
 
     return (
         <ThemeProvider theme={theme}>
             <GlobalFonts />
             <GlobalStyle />
-            <Layout>
-                <WorkContent animate={workContent} />
-
-                <div className="App">
-                    <Row>
-                        <InfoCard />
-                        <Work onClick={() => showWorkContent(true)} />
-                    </Row>
-                    <Row>
-                        <Portfolio />
-                        <Skills />
-                        <Resume />
-                    </Row>
-                </div>
-            </Layout>
+            <Layout>{buildApp}</Layout>
         </ThemeProvider>
     );
 }
 
-export default App;
+export default React.memo(App);

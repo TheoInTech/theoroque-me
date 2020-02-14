@@ -15,6 +15,8 @@ const InfoCardStyle = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    background: ${props => props.theme.whiteColor};
+    box-shadow: ${props => props.theme.boxShadow};
 `;
 
 const Image = styled.img`

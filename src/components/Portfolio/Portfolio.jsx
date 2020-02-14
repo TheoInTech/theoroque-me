@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { card } from "../../assets/theme";
-// import { Row, Col } from "react-bootstrap";
 
 const PortfolioStyle = styled(card)`
     width: 40%;
@@ -40,9 +39,9 @@ const PortfolioStyle = styled(card)`
     }
 `;
 
-const Portfolio = () => {
+const Portfolio = ({ onClick }) => {
     return (
-        <PortfolioStyle>
+        <PortfolioStyle onClick={onClick}>
             <h2>Portfolio</h2>
         </PortfolioStyle>
     );
