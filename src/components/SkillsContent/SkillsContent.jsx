@@ -48,6 +48,11 @@ const SkillsContent = ({ onClose, style }) => {
                 display: inline-block;
                 margin: 0 24px;
             }
+
+            &:hover:not(:last-child):after {
+                color: ${props => props.theme.lightGrayColor};
+                opacity: 0.5;
+            }
         }
     `;
 
@@ -78,6 +83,11 @@ const SkillsContent = ({ onClose, style }) => {
                 content: " ● ";
                 display: inline-block;
                 margin: 0 24px;
+            }
+
+            &:hover:not(:last-child):after {
+                color: ${props => props.theme.lightGrayColor};
+                opacity: 0.5;
             }
         }
     `;
