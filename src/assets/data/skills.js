@@ -9,12 +9,12 @@ export default {
         "MySQL",
         "RESTful API",
         "jQuery & Ajax",
+        "NPM",
+        "Agile Methodologies (Scrum & Kanban)",
+        "Data Analytics (Facebook, Google & Segment)",
         "Adobe Photoshop",
         "Adobe Illustrator",
-        "Adobe Xd",
-        "NPM",
-        "Agile Methodologies (Scum & Kanban)",
-        "Data Analytics (Facebook, Google & Segment)"
+        "Adobe Xd"
     ],
     knowledgeable: [
         "MongoDB",
@@ -25,6 +25,8 @@ export default {
         "Webpack Configuration",
         "CI / CD",
         "Jest & Enzyme Testing",
-        "Search Engine Optimization"
+        "Search Engine Optimization",
+        "Digital Marketing",
+        "Social Media Management"
     ]
 };
