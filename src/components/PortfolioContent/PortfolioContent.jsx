@@ -34,7 +34,7 @@ const PortfolioContent = ({ onClose, styleArg }) => {
         text-align: right;
         word-break: break-word;
         margin-right: 36px;
-        flex: 0 1 auto;
+        flex: 0 1 45%;
         order: 1;
     `;
 

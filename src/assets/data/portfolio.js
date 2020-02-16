@@ -17,7 +17,7 @@ export default [
     },
     {
         _id: 3,
-        title: "Myx Daily Top 10 Charts",
+        title: "MYX Daily Top 10 Charts",
         description:
             "an iOS Mobile application built on Objective-C for viewing and voting at MYX TV's daily top 10 music videos.",
         thumbnail: [
