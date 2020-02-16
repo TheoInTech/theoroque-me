@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { AnimateOnChange } from "react-animation";
+import { StickyContainer } from "react-sticky";
 
-const Background = styled.div`
+const Background = styled(StickyContainer)`
     font-family: ${props => props.theme.muli};
     display: flex;
     flex-wrap: wrap;

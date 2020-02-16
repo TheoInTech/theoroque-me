@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Row } from "react-bootstrap";
 import styled from "styled-components";
@@ -64,7 +64,7 @@ function App() {
                 />
                 <PortfolioContent
                     onClose={() => showContent("")}
-                    style={
+                    styleArg={
                         content === "portfolio"
                             ? { visibility: "visible", position: "relative" }
                             : {

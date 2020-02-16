@@ -24,9 +24,9 @@ const WorkContent = ({ onClose, style }) => {
                 <CloseButton onClick={onClose} />
                 <h2>Work</h2>
                 <Container>
-                    {works.map((work, index) => {
-                        return <WorkBlock key={work._id} work={work} />;
-                    })}
+                    {works.map((work, index) => (
+                        <WorkBlock key={work._id} work={work} />
+                    ))}
                 </Container>
             </WorkOverlay>
         </Row>
