@@ -42,9 +42,9 @@ const SkillsContent = ({ onClose, style }) => {
             }
 
             &:not(:last-child):after {
-                content: " ";
+                content: " ● ";
                 display: inline-block;
-                margin-right: 36px;
+                margin: 0 24px;
             }
         }
     `;
@@ -71,9 +71,9 @@ const SkillsContent = ({ onClose, style }) => {
             }
 
             &:not(:last-child):after {
-                content: " ";
+                content: " ● ";
                 display: inline-block;
-                margin-right: 36px;
+                margin: 0 24px;
             }
         }
     `;
