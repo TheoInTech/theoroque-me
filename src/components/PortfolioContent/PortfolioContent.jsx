@@ -13,7 +13,7 @@ const PortfolioContent = ({ onClose, styleArg }) => {
     const Container = styled.div`
         display: flex;
         flex-flow: column wrap;
-        padding: 8px 36px;
+        padding: 16px 60px;
         overflow: auto;
         align-items: center;
         justify-content: center;
@@ -29,13 +29,19 @@ const PortfolioContent = ({ onClose, styleArg }) => {
     `;
 
     const Desc = styled.p`
-        font-size: 28px;
+        font-size: 40px;
         color: ${props => props.theme.whiteColor};
         text-align: right;
         word-break: break-word;
         margin-right: 36px;
         flex: 0 1 45%;
         order: 1;
+        margin-top: 24px;
+
+        strong {
+            font-size: 48px;
+            color: ${props => props.theme.yellowColor};
+        }
     `;
 
     const Image = styled.img`

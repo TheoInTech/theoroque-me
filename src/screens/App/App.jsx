@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    background-color: #F7F7F7;
+    background-color: #101C2E;
     overflow: hidden;
   }
 `;

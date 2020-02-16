@@ -13,7 +13,7 @@ const SkillsContent = ({ onClose, style }) => {
     const Container = styled.div`
         display: flex;
         flex-flow: row nowrap;
-        padding: 8px 16px;
+        padding: 16px 60px;
         overflow: auto;
         align-items: center;
         justify-content: space-between;
@@ -22,14 +22,16 @@ const SkillsContent = ({ onClose, style }) => {
 
     const StrongSkills = styled.div`
         flex: 1 1 auto;
-        justify-self: flex-start;
         text-align: center;
+        padding: 0px 24px;
+        height: 500px;
 
         h3 {
-            color: ${props => props.theme.whiteColor};
+            color: ${props => props.theme.yellowColor};
             font-size: 48px;
             font-weight: 700;
             text-shadow: ${props => props.theme.textShadow};
+            margin-bottom: 36px;
         }
         span {
             color: ${props => props.theme.lightGrayColor};
@@ -51,14 +53,16 @@ const SkillsContent = ({ onClose, style }) => {
 
     const KnowledgeableSkills = styled.div`
         flex: 1 1 auto;
-        justify-self: flex-end;
         text-align: center;
+        padding: 0px 24px;
+        height: 500px;
 
         h3 {
             color: ${props => props.theme.whiteColor};
             font-size: 48px;
             font-weight: 700;
             text-shadow: ${props => props.theme.textShadow};
+            margin-bottom: 36px;
         }
         span {
             color: ${props => props.theme.lightGrayColor};
