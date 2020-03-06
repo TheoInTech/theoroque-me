@@ -94,7 +94,7 @@ const IconLink = styled.a`
         transition-duration: ${props => props.theme.transitionDuration};
 
         &:hover {
-            fill: ${props => props.theme.blackColor};
+            fill: ${props => props.theme.greenColor};
         }
 
         @media (max-width: 850px) {

@@ -8,7 +8,7 @@ const theme = {
     grayColor: "#787878",
     offWhiteColor: "#F5F5F5",
     whiteColor: "#FFFFFF",
-    boxShadow: "0px 9px 6px #00000040",
+    boxShadow: "0px 6px 5px #00000029",
     textShadow: "0px 4px 5px #00000029",
     closeShadow: "0px 10px 10px #00000029",
     transitionDuration: "0.3s"

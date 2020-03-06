@@ -68,14 +68,14 @@ const SkillsContent = () => {
         <Container>
             <Skills>
                 <h3>Awesomely Strong</h3>
-                {skills.strong.map(skill => (
-                    <span>{skill}</span>
+                {skills.strong.map((skill, key) => (
+                    <span key={key}>{skill}</span>
                 ))}
             </Skills>
             <Skills>
                 <h3>Knowledgeable</h3>
-                {skills.knowledgeable.map(skill => (
-                    <span>{skill}</span>
+                {skills.knowledgeable.map((skill, key) => (
+                    <span key={key}>{skill}</span>
                 ))}
             </Skills>
         </Container>

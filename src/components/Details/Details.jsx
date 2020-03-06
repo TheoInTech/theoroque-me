@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import SkillsContent from "../SkillsContent";
+import ExperiencesContent from "../ExperiencesContent";
 
 const Container = styled.div`
     flex: 1;
@@ -8,7 +9,7 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-flow: column nowrap;
-    background: linear-gradient(#ffffff85, #ffffff85), url("/bg/paper.jpg");
+    background: linear-gradient(#ffffff55, #ffffff55), url("/bg/paper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -88,7 +89,7 @@ const Details = () => {
             <Content>
                 {activeTab === "about" && "About page - WIP"}
                 {activeTab === "skills" && <SkillsContent />}
-                {activeTab === "experiences" && "Experiences page - WIP"}
+                {activeTab === "experiences" && <ExperiencesContent />}
                 {activeTab === "projects" && "Projects page - WIP"}
             </Content>
         </Container>

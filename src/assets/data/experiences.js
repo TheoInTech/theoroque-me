@@ -3,7 +3,7 @@ export default [
         _id: 1,
         year: "2015",
         title: "Applications Developer",
-        company: "IBM Solutions Delivery / ABS-CBN Corporation",
+        company: "IBM SD | ABS-CBN Corporation",
         projects: [
             "iWanTV Mobile Android Application",
             "MYX Daily Top 10 iOS Application",
@@ -15,7 +15,7 @@ export default [
         _id: 2,
         year: "2016",
         title: "Mid-level Software Engineer",
-        company: "Zigzag Media, Inc. / BeeStripe LLC",
+        company: "Zigzag Media, Inc.",
         projects: [
             "loginalarm.com",
             "Browser Extensions",
@@ -36,7 +36,7 @@ export default [
         _id: 3,
         year: "2019",
         title: "Software Engineer",
-        company: "SenditOut International Outsourcing, Inc.",
+        company: "SenditOut | VitalLogistics",
         projects: [
             "vitallogistics.ca",
             "Intellishipper (still in development)"
