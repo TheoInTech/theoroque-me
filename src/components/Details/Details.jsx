@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import SkillsContent from "../SkillsContent";
 
 const Container = styled.div`
     flex: 1;
@@ -7,8 +8,10 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-flow: column nowrap;
-    background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%) 0% 0%
-        no-repeat padding-box;
+    background: linear-gradient(#ffffff85, #ffffff85), url("/bg/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
     @media (max-width: 850px) {
         flex: 1 0 100%;
@@ -44,7 +47,7 @@ const MenuButtonActive = styled(MenuButton)`
 `;
 
 const Content = styled.div`
-    padding: 24px;
+    overflow: auto;
 `;
 
 const Details = () => {
@@ -84,7 +87,7 @@ const Details = () => {
             </MenuGroup>
             <Content>
                 {activeTab === "about" && "About page - WIP"}
-                {activeTab === "skills" && "Skills page - WIP"}
+                {activeTab === "skills" && <SkillsContent />}
                 {activeTab === "experiences" && "Experiences page - WIP"}
                 {activeTab === "projects" && "Projects page - WIP"}
             </Content>

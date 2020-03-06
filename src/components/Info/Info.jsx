@@ -8,21 +8,21 @@ const Container = styled.div`
     align-items: center;
     flex-flow: column nowrap;
     text-align: center;
-    background: linear-gradient(180deg, #072c37 0%, #04bfa6 100%) 0% 0%
+    background: linear-gradient(180deg, #011927 0%, #06595d 100%) 0% 0%
         no-repeat padding-box;
     color: ${props => props.theme.whiteColor};
     padding: 24px;
 
     @media (max-width: 850px) {
         flex: 1 0 100%;
-        padding: 24px;
+        padding: 16px;
     }
 `;
 
 const Image = styled.img`
     border-radius: 50% !important;
     box-shadow: ${props => props.theme.boxShadow};
-    border: 5px solid ${props => props.theme.whiteColor};
+    border: 2px solid ${props => props.theme.whiteColor};
     width: 100%;
     max-width: 200px;
 

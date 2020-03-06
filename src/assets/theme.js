@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 const theme = {
     muli: "Proxima Nova",
-    greenColor: "#04BFA6",
+    greenColor: "#03a992",
     darkGreenColor: "#044740",
     blackColor: "#282828",
+    grayColor: "#787878",
     offWhiteColor: "#F5F5F5",
     whiteColor: "#FFFFFF",
     boxShadow: "0px 9px 6px #00000040",
@@ -20,7 +21,6 @@ const Card = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    cursor: pointer;
     transition-duration: ${props => props.theme.transitionDuration};
     padding: 36px;
     -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),

@@ -1,118 +1,84 @@
 import React from "react";
 import styled from "styled-components";
-import { overlay } from "../../assets/theme";
-import CloseButton from "../CloseButton";
-import { Row } from "react-bootstrap";
 import skills from "../../assets/data/skills";
 
-const SkillsContent = ({ onClose, style }) => {
-    const SkillsOverlay = styled(overlay)`
-        background: ${props => props.theme.aquaBlueColor};
-    `;
+const Container = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 24px;
 
-    const Container = styled.div`
-        display: flex;
-        flex-flow: row nowrap;
-        padding: 16px 60px;
-        overflow: auto;
-        align-items: center;
-        justify-content: space-between;
-        padding: 36px;
-    `;
+    @media (max-width: 850px) {
+        padding: 24px 8px;
+    }
+`;
 
-    const StrongSkills = styled.div`
-        flex: 1 1 auto;
-        text-align: center;
-        padding: 0px 24px;
-        height: 500px;
+const Skills = styled.div`
+    flex: 1 1 auto;
+    padding: 0px 24px;
+    margin-bottom: 36px;
 
-        h3 {
-            color: ${props => props.theme.yellowColor};
-            font-size: 48px;
-            font-weight: 700;
-            text-shadow: ${props => props.theme.textShadow};
-            margin-bottom: 36px;
+    h3 {
+        color: ${props => props.theme.yellowColor};
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+
+        @media (max-width: 850px) {
+            font-size: 24px;
         }
-        span {
-            color: ${props => props.theme.lightGrayColor};
-            font-size: 36px;
-            opacity: 0.5;
+    }
 
-            &:hover {
-                color: ${props => props.theme.whiteColor};
-                opacity: 1;
-            }
+    span {
+        color: ${props => props.theme.blackColor};
+        font-size: 24px;
+        line-height: 1.5em;
+
+        &:not(:last-child):after {
+            content: " ● ";
+            font-size: 12px;
+            display: inline-block;
+            margin: 0 16px;
+            color: ${props => props.theme.grayColor};
+        }
+
+        @media (max-width: 850px) {
+            display: block;
+            font-size: 21px;
 
             &:not(:last-child):after {
+                content: "";
+            }
+
+            &:before {
                 content: " ● ";
+                font-size: 12px;
                 display: inline-block;
-                margin: 0 24px;
-            }
-
-            &:hover:not(:last-child):after {
-                color: ${props => props.theme.lightGrayColor};
-                opacity: 0.5;
+                margin-right: 16px;
+                color: ${props => props.theme.grayColor};
             }
         }
-    `;
+    }
+`;
 
-    const KnowledgeableSkills = styled.div`
-        flex: 1 1 auto;
-        text-align: center;
-        padding: 0px 24px;
-        height: 500px;
-
-        h3 {
-            color: ${props => props.theme.whiteColor};
-            font-size: 48px;
-            font-weight: 700;
-            text-shadow: ${props => props.theme.textShadow};
-            margin-bottom: 36px;
-        }
-        span {
-            color: ${props => props.theme.lightGrayColor};
-            font-size: 36px;
-            opacity: 0.5;
-
-            &:hover {
-                color: ${props => props.theme.whiteColor};
-                opacity: 1;
-            }
-
-            &:not(:last-child):after {
-                content: " ● ";
-                display: inline-block;
-                margin: 0 24px;
-            }
-
-            &:hover:not(:last-child):after {
-                color: ${props => props.theme.lightGrayColor};
-                opacity: 0.5;
-            }
-        }
-    `;
-
+const SkillsContent = () => {
     return (
-        <Row style={style}>
-            <SkillsOverlay>
-                <CloseButton onClick={onClose} />
-                <h2>Skills</h2>
-                <Container>
-                    <StrongSkills>
-                        <h3>Awesomely Strong</h3>
-                        {skills.strong.map(skill => (
-                            <span>{skill}</span>
-                        ))}
-                    </StrongSkills>
-                    <KnowledgeableSkills>
-                        <h3>Knowledgeable</h3>
-                        {skills.knowledgeable.map(skill => (
-                            <span>{skill}</span>
-                        ))}
-                    </KnowledgeableSkills>
-                </Container>
-            </SkillsOverlay>
-        </Row>
+        <Container>
+            <Skills>
+                <h3>Awesomely Strong</h3>
+                {skills.strong.map(skill => (
+                    <span>{skill}</span>
+                ))}
+            </Skills>
+            <Skills>
+                <h3>Knowledgeable</h3>
+                {skills.knowledgeable.map(skill => (
+                    <span>{skill}</span>
+                ))}
+            </Skills>
+        </Container>
     );
 };
 
