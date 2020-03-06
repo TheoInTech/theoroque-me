@@ -54,10 +54,10 @@ const Details = () => {
         <Container>
             <MenuGroup>
                 {activeTab === "about" ? (
-                    <MenuButtonActive disabled>Who's Theo</MenuButtonActive>
+                    <MenuButtonActive disabled>About</MenuButtonActive>
                 ) : (
                     <MenuButton onClick={() => setActiveTab("about")}>
-                        Who's Theo
+                        About
                     </MenuButton>
                 )}
                 {activeTab === "skills" ? (
