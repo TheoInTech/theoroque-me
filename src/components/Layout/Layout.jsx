@@ -1,32 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
-import { AnimateOnChange } from "react-animation";
-import { StickyContainer } from "react-sticky";
 
-const Background = styled(StickyContainer)`
+const LayoutStyle = styled.div`
     font-family: ${props => props.theme.muli};
     display: flex;
-    flex-wrap: wrap;
-    background: none;
-    margin: 5vh;
-    height: 100%;
-`;
+    flex-flow: row nowrap;
+    height: 100vh;
+    width: 100vw;
 
-const CustomAnimateOnChange = styled(AnimateOnChange)`
-    display: block !important;
+    @media (max-width: 850px) {
+        flex-flow: column nowrap;
+    }
 `;
 
 const Layout = ({ children }) => {
-    return (
-        <Background>
-            <Container fluid>
-                <CustomAnimateOnChange animation="pop">
-                    {children}
-                </CustomAnimateOnChange>
-            </Container>
-        </Background>
-    );
+    return <LayoutStyle>{children}</LayoutStyle>;
 };
 
-export default React.memo(Layout);
+export default Layout;
