@@ -10,7 +10,11 @@ const Container = styled.div`
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    flex: 1 0 auto;
+    flex: 1;
+
+    @media (max-width: 850px) {
+        flex: 1 0 auto;
+    }
 `;
 
 const MenuGroup = styled.div`
