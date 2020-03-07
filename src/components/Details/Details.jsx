@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import AboutContent from "./components/AboutContent";
 import SkillsContent from "./components/SkillsContent";
 import ExperiencesContent from "./components/ExperiencesContent";
 import ProjectsContent from "./components/ProjectsContent";
+import scrollToRef from "utils/scrollToRef";
 
 const Container = styled.div`
     display: flex;
@@ -58,35 +59,41 @@ const Content = styled.div`
 
 const Details = () => {
     const [activeTab, setActiveTab] = useState("about");
+    const contentRef = useRef(null);
+
+    const handleMenuClick = tab => {
+        setActiveTab(tab);
+        scrollToRef(contentRef);
+    };
 
     return (
-        <Container>
+        <Container ref={contentRef}>
             <MenuGroup>
                 {activeTab === "about" ? (
                     <MenuButtonActive disabled>About</MenuButtonActive>
                 ) : (
-                    <MenuButton onClick={() => setActiveTab("about")}>
+                    <MenuButton onClick={() => handleMenuClick("about")}>
                         About
                     </MenuButton>
                 )}
                 {activeTab === "skills" ? (
                     <MenuButtonActive disabled>Skills</MenuButtonActive>
                 ) : (
-                    <MenuButton onClick={() => setActiveTab("skills")}>
+                    <MenuButton onClick={() => handleMenuClick("skills")}>
                         Skills
                     </MenuButton>
                 )}
                 {activeTab === "experiences" ? (
                     <MenuButtonActive disabled>Experiences</MenuButtonActive>
                 ) : (
-                    <MenuButton onClick={() => setActiveTab("experiences")}>
+                    <MenuButton onClick={() => handleMenuClick("experiences")}>
                         Experiences
                     </MenuButton>
                 )}
                 {activeTab === "projects" ? (
                     <MenuButtonActive disabled>Projects</MenuButtonActive>
                 ) : (
-                    <MenuButton onClick={() => setActiveTab("projects")}>
+                    <MenuButton onClick={() => handleMenuClick("projects")}>
                         Projects
                     </MenuButton>
                 )}
