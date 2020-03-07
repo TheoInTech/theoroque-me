@@ -1,9 +1,10 @@
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import Layout from "../../components/Layout";
-import { theme } from "../../assets/theme";
-import Info from "../../components/Info";
-import Details from "../../components/Details";
+import GlobalFonts from "assets/fonts/fonts";
+import Layout from "components/Layout";
+import { theme } from "assets/theme";
+import Info from "components/Info";
+import Details from "components/Details";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -54,6 +55,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
+            <GlobalFonts />
             <Layout>
                 <Info />
                 <Details />
