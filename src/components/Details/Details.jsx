@@ -1,46 +1,43 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SkillsContent from "../SkillsContent";
-import ExperiencesContent from "../ExperiencesContent";
+import SkillsContent from "./components/SkillsContent";
+import ExperiencesContent from "./components/ExperiencesContent";
+import AboutContent from "./components/AboutContent";
 
 const Container = styled.div`
-    flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-flow: column nowrap;
-    background: linear-gradient(#ffffff55, #ffffff55), url("/bg/paper.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    @media (max-width: 850px) {
-        flex: 1 0 100%;
-    }
+    width: 100%;
+    flex: 1;
 `;
 
 const MenuGroup = styled.div`
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
 `;
 
 const MenuButton = styled.button`
     color: ${props => props.theme.whiteColor};
-    padding: 8px 16px;
+    padding: 16px;
     background: ${props => props.theme.darkGreenColor};
-    font-size: 16px;
+    font-size: 21px;
     border: none;
     flex: 1;
     transition-duration: ${props => props.theme.transitionDuration};
+    cursor: pointer;
 
     &:hover {
         filter: brightness(1.5);
+    }
+
+    @media (max-width: 850px) {
+        font-size: 14px;
     }
 `;
 
 const MenuButtonActive = styled(MenuButton)`
     background: ${props => props.theme.greenColor};
+    cursor: auto;
 
     &:hover {
         filter: none;
@@ -49,6 +46,13 @@ const MenuButtonActive = styled(MenuButton)`
 
 const Content = styled.div`
     overflow: auto;
+    background: linear-gradient(#ffffff55, #ffffff55), url("/bg/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding: 16px;
 `;
 
 const Details = () => {
@@ -87,7 +91,7 @@ const Details = () => {
                 )}
             </MenuGroup>
             <Content>
-                {activeTab === "about" && "About page - WIP"}
+                {activeTab === "about" && <AboutContent />}
                 {activeTab === "skills" && <SkillsContent />}
                 {activeTab === "experiences" && <ExperiencesContent />}
                 {activeTab === "projects" && "Projects page - WIP"}

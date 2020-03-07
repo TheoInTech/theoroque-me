@@ -2,32 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     text-align: center;
-    background: linear-gradient(180deg, #011927 0%, #06595d 100%) 0% 0%
-        no-repeat padding-box;
+    background: linear-gradient(180deg, #011927ee 0%, #06595dee 100%) 0% 0%,
+        url("/bg/programming.jpg") no-repeat padding-box;
+    background-size: cover;
     color: ${props => props.theme.whiteColor};
     padding: 24px;
-
-    @media (max-width: 850px) {
-        flex: 1 0 100%;
-        padding: 16px;
-    }
+    flex: 1;
 `;
 
-const Image = styled.img`
-    border-radius: 50% !important;
-    box-shadow: ${props => props.theme.boxShadow};
-    border: 2px solid ${props => props.theme.whiteColor};
+const Logo = styled.img`
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
 
     @media (max-width: 850px) {
-        max-width: 180px;
+        max-width: 160px;
     }
 `;
 
@@ -41,7 +34,8 @@ const NameH1 = styled.h1`
     letter-spacing: 6px;
 
     @media (max-width: 850px) {
-        font-size: 64px;
+        font-size: 48px;
+        margin: 16px auto;
     }
 `;
 
@@ -60,6 +54,7 @@ const PositionSpan = styled.span`
         content: " ● ";
         display: inline-block;
         margin: 0 12px;
+        font-size: 8px;
 
         @media (max-width: 850px) {
             content: "";
@@ -122,16 +117,12 @@ const BtnResume = styled.a`
         color: ${props => props.theme.whiteColor};
         text-decoration: none;
     }
-
-    @media (max-width: 850px) {
-        max-width: 100%;
-    }
 `;
 
 const Info = () => {
     return (
         <Container>
-            <Image src="/theo.jpg" alt="Theo Roque" title="Theo Roque" />
+            <Logo src="/logo.png" alt="Logo" title="Logo" />
             <NameH1>
                 Theo
                 <br />

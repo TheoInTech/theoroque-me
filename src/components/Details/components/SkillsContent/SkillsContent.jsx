@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import skills from "../../assets/data/skills";
+import skills from "assets/data/skills";
 
 const Container = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    padding: 36px 24px;
+    padding: 16px 48px;
 
     @media (max-width: 850px) {
         padding: 24px 8px;
@@ -16,7 +14,6 @@ const Container = styled.div`
 
 const Skills = styled.div`
     flex: 1 1 auto;
-    padding: 0px 24px;
     margin-bottom: 36px;
 
     h3 {
@@ -27,7 +24,7 @@ const Skills = styled.div`
         text-transform: uppercase;
 
         @media (max-width: 850px) {
-            font-size: 24px;
+            font-size: 21px;
         }
     }
 
@@ -46,7 +43,7 @@ const Skills = styled.div`
 
         @media (max-width: 850px) {
             display: block;
-            font-size: 21px;
+            font-size: 18px;
 
             &:not(:last-child):after {
                 content: "";
