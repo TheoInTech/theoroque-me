@@ -5,7 +5,7 @@ import experiences from "assets/data/experiences";
 const Container = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    padding: 16px 48px;
+    padding: 16px 36px;
 
     @media (max-width: 850px) {
         padding: 24px 8px;
@@ -18,7 +18,7 @@ const Experience = styled.div`
     margin: 16px auto;
     background: ${props => props.theme.whiteColor};
     box-shadow: ${props => props.theme.boxShadow};
-    width: 100%;
+    width: -webkit-fill-available;
 
     @media (max-width: 850px) {
         width: auto;

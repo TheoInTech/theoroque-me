@@ -5,7 +5,7 @@ import skills from "assets/data/skills";
 const Container = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    padding: 16px 48px;
+    padding: 16px 36px;
 
     @media (max-width: 850px) {
         padding: 24px 8px;

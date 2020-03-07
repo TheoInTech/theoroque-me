@@ -46,6 +46,10 @@ const MenuButtonActive = styled(MenuButton)`
 
 const Content = styled.div`
     overflow: auto;
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
     background: linear-gradient(#ffffff55, #ffffff55), url("/bg/paper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
