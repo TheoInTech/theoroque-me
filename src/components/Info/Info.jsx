@@ -12,7 +12,7 @@ const Container = styled.div`
     background-size: cover;
     color: ${props => props.theme.whiteColor};
     padding: 24px;
-    flex: 1;
+    flex: 1 0 auto;
 `;
 
 const Logo = styled.img`

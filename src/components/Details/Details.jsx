@@ -10,7 +10,7 @@ const Container = styled.div`
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    flex: 1;
+    flex: 1 0 auto;
 `;
 
 const MenuGroup = styled.div`

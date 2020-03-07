@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const theme = {
-    muli: "Proxima Nova",
+    muli: "Proxima Nova, sans-serif !important",
     greenColor: "#03a992",
     darkGreenColor: "#044740",
     blackColor: "#282828",
