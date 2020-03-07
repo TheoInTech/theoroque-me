@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import AboutContent from "./components/AboutContent";
 import SkillsContent from "./components/SkillsContent";
 import ExperiencesContent from "./components/ExperiencesContent";
-import AboutContent from "./components/AboutContent";
+import ProjectsContent from "./components/ProjectsContent";
 
 const Container = styled.div`
     display: flex;
@@ -46,10 +47,6 @@ const MenuButtonActive = styled(MenuButton)`
 
 const Content = styled.div`
     overflow: auto;
-    ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-    }
     background: linear-gradient(#ffffff55, #ffffff55), url("/bg/paper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +95,7 @@ const Details = () => {
                 {activeTab === "about" && <AboutContent />}
                 {activeTab === "skills" && <SkillsContent />}
                 {activeTab === "experiences" && <ExperiencesContent />}
-                {activeTab === "projects" && "Projects page - WIP"}
+                {activeTab === "projects" && <ProjectsContent />}
             </Content>
         </Container>
     );

@@ -17,6 +17,14 @@ export default [
     },
     {
         _id: 3,
+        title: "Yosi Hub",
+        description:
+            "a web application that utilizes Mapbox. It allows the smokers' community to mark and verify legal smoking area in various places.",
+        thumbnail: "/portfolio/yosihub.png",
+        alt: "yosihub"
+    },
+    {
+        _id: 4,
         title: "MYX Daily Top 10 Charts",
         description:
             "an iOS Mobile application built on Objective-C for viewing and voting at MYX TV's daily top 10 music videos.",
@@ -27,7 +35,7 @@ export default [
         ]
     },
     {
-        _id: 4,
+        _id: 5,
         title: "Vault Safe Search",
         description:
             "a website and browser extension for determining if the current website tab is suspicious or is listed as malicious.",
@@ -35,7 +43,7 @@ export default [
         alt: "vaultsafesearch_com"
     },
     {
-        _id: 5,
+        _id: 6,
         title: "Vault Protect",
         description:
             "a website dedicated to present Vault products such as antivirus, browser extension and blog articles.",
@@ -43,7 +51,7 @@ export default [
         alt: "vaultprotect_com"
     },
     {
-        _id: 6,
+        _id: 7,
         title: "BigLoot",
         description:
             "a web application that utilizes cryptocurrency Javascript mining to earn tickets and claim rewards.",
@@ -51,7 +59,7 @@ export default [
         alt: "bigloot_com"
     },
     {
-        _id: 7,
+        _id: 8,
         title: "Single Page Template",
         description:
             "a simple website template to be used for static websites that uses material design and animation.",

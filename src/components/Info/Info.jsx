@@ -111,6 +111,7 @@ const BtnResume = styled.a`
     color: ${props => props.theme.whiteColor};
     font-weight: 700;
     transition-duration: ${props => props.theme.transitionDuration};
+    text-decoration: none;
 
     &:hover {
         background: rgba(255, 255, 255, 0.15);
