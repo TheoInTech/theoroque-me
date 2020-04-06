@@ -237,7 +237,7 @@ const Info = () => {
                 </li>
             </IconList>
             <BtnResume
-                href="https://drive.google.com/open?id=1n7WwyHQVEh3fQO6AbzKfqdyoD8ds5Xs-"
+                href={process.env.REACT_APP_RESUME_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
             >
