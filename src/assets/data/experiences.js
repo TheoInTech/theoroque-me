@@ -1,18 +1,36 @@
 export default [
     {
         _id: 1,
-        year: "2015",
-        title: "Applications Developer",
-        company: "IBM SD | ABS-CBN Corporation",
+        year: "2022",
+        title: "Lead Front-end Engineer",
+        company: "Accenture",
         projects: [
-            "iWanTV Mobile Android Application",
-            "MYX Daily Top 10 iOS Application",
-            "SMS Blast Internal Web Application"
+            "CMS Admin Panel",
         ],
-        technologies: ["Androi Java", "Objecive-C", "C# ASP.NET"]
+        technologies: [
+            "HTML & CSS",
+            "Javascript, React & Redux",
+            "React Testing Library"
+        ]
     },
     {
         _id: 2,
+        year: "2019",
+        title: "Software Engineer",
+        company: "SenditOut | VitalLogistics",
+        projects: [
+            "vitallogistics.ca",
+            "Intellishipper (still in development)"
+        ],
+        technologies: [
+            "Laravel PHP",
+            "HTML & CSS",
+            "Javascript, React & Redux",
+            "Elastic search & Kibana"
+        ]
+    },
+    {
+        _id: 3,
         year: "2016",
         title: "Mid-level Software Engineer",
         company: "Zigzag Media, Inc.",
@@ -33,19 +51,15 @@ export default [
         ]
     },
     {
-        _id: 3,
-        year: "2019",
-        title: "Software Engineer",
-        company: "SenditOut | VitalLogistics",
+        _id: 4,
+        year: "2015",
+        title: "Applications Developer",
+        company: "IBM SD | ABS-CBN Corporation",
         projects: [
-            "vitallogistics.ca",
-            "Intellishipper (still in development)"
+            "iWanTV Mobile Android Application",
+            "MYX Daily Top 10 iOS Application",
+            "SMS Blast Internal Web Application"
         ],
-        technologies: [
-            "Laravel PHP",
-            "HTML & CSS",
-            "Javascript, React & Redux",
-            "Elastic search & Kibana"
-        ]
+        technologies: ["Androi Java", "Objecive-C", "C# ASP.NET"]
     }
 ];
