@@ -102,7 +102,7 @@ const AboutContent = () => {
                     </li>
                 </ul>
                 <p>
-                    With more than 5 years of programming experience, I
+                    With 7 years of programming experience, I
                     proactively help organizations and enterprises solve their
                     digital problems. From layout and design to web development;
                     from deployment to marketing.
