@@ -1,7 +1,7 @@
 export default [
     {
         _id: 1,
-        year: "2022",
+        year: "2020",
         title: "Lead Front-end Engineer",
         company: "Accenture",
         projects: [
